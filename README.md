@@ -17,5 +17,3 @@ MainCoinciden.java --> Contiene el resultado de realizar la tarea 1.3, para ejec
 de las variables "FICHERO_1" y "FICHERO_2", sustituyendo su valor por el de los nombre de los ficheros a utilizar,
 los cuales deben encontrarse en la raiz del proyecto. EL resultado se muestra por consola.
 (Resumen MD5 --> b82f22a0c4e7f6fd758f71a28b660e14)
-
-Debido a que el proyecto completo está alojado en un repositorio de GitHub, no he podido obtener el resumen MD5 del mismo.
