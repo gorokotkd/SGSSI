@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class Main {
 
-	private static final String FICHERO = "SGSSI-20.CB.03.txt";
+	private static final String FICHERO = "SGSSI-20.CB.04.txt";
 	private static int num0s = 0;
 	private static String hex = "FFFFFFFF";
 	private static String mejorHash = "00000000000000000000000000000000";
