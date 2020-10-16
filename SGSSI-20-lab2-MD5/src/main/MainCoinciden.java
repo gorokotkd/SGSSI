@@ -56,7 +56,7 @@ public class MainCoinciden {
 		}
 		
 		if(line1 == null) {
-			if(!line2.matches("-?[0-9a-fA-F]+"))
+			if(!line2.matches("-?[0-9a-fA-F]{8}+G([0-3][0-9])+"))
 				return false;
 		}
 		

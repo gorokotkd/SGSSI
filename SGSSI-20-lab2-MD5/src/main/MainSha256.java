@@ -16,7 +16,8 @@ import java.util.Random;
 
 public class MainSha256 {
 
-	private static final String FICHERO = "SGSSI-20.CB.04.txt";
+	private static final String FICHERO = "SGSSI-20.CB.06.txt";
+	private static final String GRUPO_ID = "G1129";
 	private static int num0s = 0;
 	private static String hex = "FFFFFFFF";
 	private static String mejorHash = "00000000000000000000000000000000";
@@ -54,7 +55,7 @@ public class MainSha256 {
 	
 	private static boolean esMejor(String hash) {
 		
-		int y = 0;
+	/*	int y = 0;
 		String aux = hash.substring(0,0);
 		for(int i = 1; i < hash.length(); i++) {
 			if(hash.substring(0, i).equals(mejorHash.substring(0, i))) {
@@ -66,11 +67,15 @@ public class MainSha256 {
 			num0s = y;
 			return true;
 		}else
+			return false;*/
+		if(hash.startsWith("0000")) {
+			return true;
+		}else
 			return false;
 	}
 	
 	
-	private static String tarea1(MessageDigest digest, File file) throws IOException{
+	public static String tarea1(MessageDigest digest, File file) throws IOException{
 		FileInputStream fis = new FileInputStream(file);
 		
 		byte[] byteArray = new byte[1024];
@@ -114,7 +119,7 @@ public class MainSha256 {
 			line = br.readLine();
 		}
 		String hexStr = getRandomHexString(8);
-		oldContent = oldContent + hexStr;
+		oldContent = oldContent + hexStr + " "+GRUPO_ID;
 		hex = hexStr;
 		fw.write(oldContent);
 		fw.close();
