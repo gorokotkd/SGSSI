@@ -13,8 +13,8 @@ import main.Main;
 public class MainCoinciden {
 
 	
-	private static final String FICHERO_1 = "SGSSI-20.CB.04.txt";
-	private static final String FICHERO_2 = "Copia_SGSSI-20.CB.04.txt";
+	private static final String FICHERO_1 = "SGSSI-20.CB.06.txt";
+	private static final String FICHERO_2 = "Copia_SGSSI-20.CB.06.txt";
 	
 	
 	public static void main(String[] args) throws IOException, NoSuchAlgorithmException {

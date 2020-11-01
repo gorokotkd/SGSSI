@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class Main {
 
-	private static final String FICHERO = "SGSSI-20.CB.06.txt";
+	private static final String FICHERO = "SGSSI-20.CB.07.txt";
 	private static final String GRUPO_ID = "G1129";
 	private static int num0s = 0;
 	private static String hex = "FFFFFFFF";
@@ -68,12 +68,27 @@ public class Main {
 			return true;
 		}else
 			return false;*/
-		if(hash.startsWith("0000")) {
+		if(hash.startsWith("00000")) {
+			//contarCeros(hash);
 			return true;
 		}else
 			return false;
 	}
 	
+	
+	private static void contarCeros(String hash) {
+		int y = 0;
+		for(int i = 0; i < hash.length(); i++) {
+			if(hash.substring(i).equals("0")){
+				y++;
+			}else {
+				num0s = y;
+				return;
+			}
+		}
+		
+		
+	}
 	
 	public static String tarea1(MessageDigest digest, File file) throws IOException{
 		FileInputStream fis = new FileInputStream(file);
