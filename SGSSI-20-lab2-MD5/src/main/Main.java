@@ -1,4 +1,4 @@
-package main;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class Main {
 
-	private static final String FICHERO = "SGSSI-20.CB.07.txt";
+	private static final String FICHERO = "SGSSI-20.CB.12.txt";
 	private static final String GRUPO_ID = "G1129";
 	private static int num0s = 0;
 	private static String hex = "FFFFFFFF";
@@ -40,9 +40,12 @@ public class Main {
 		/*	if(checksum.startsWith("00"))
 				break;*/
 			if(esMejor(checksum)) {
+				contarCeros(checksum);
 				System.out.println("------------------------");
 				System.out.println(checksum+" // Numero de 0s // "+num0s);
-				System.out.println("El hex añadido es --> "+hex);
+				System.out.println("El hex aï¿½adido es --> "+hex);
+				
+				return;
 				
 			}
 		}
@@ -68,8 +71,8 @@ public class Main {
 			return true;
 		}else
 			return false;*/
-		if(hash.startsWith("00000")) {
-			//contarCeros(hash);
+		if(hash.startsWith("000000")) {
+			//num0s = 6;
 			return true;
 		}else
 			return false;
@@ -134,6 +137,7 @@ public class Main {
 			line = br.readLine();
 		}
 		String hexStr = getRandomHexString(8);
+		//String hexStr = "a6c30eac";
 		oldContent = oldContent + hexStr + " "+GRUPO_ID;
 		hex = hexStr;
 		fw.write(oldContent);
